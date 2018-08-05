@@ -125,7 +125,7 @@ function createNewCreation(){
     else
         creationExist=1 #false
         mkdir ./tempCreations 2>> error_message.txt 1>>stdOut.txt
-        ffmpeg -f lavfi -i color=c=blue:s=2660x1980:d=5 -vf "drawtext=fontfile=/usr/share/fonts/truetype/ubuntu/Ubuntu-RI.ttf:fontsize=30: fontcolor=white:x=(w-text_w)/2:y=(h-text_h)/2:text='$creationName'" ./tempCreations/"$creationName".mp4 \
+        ffmpeg -f lavfi -i color=c=blue:s=600x600:d=5 -vf "drawtext=fontfile=/usr/share/fonts/truetype/ubuntu/Ubuntu-RI.ttf:fontsize=30: fontcolor=white:x=(w-text_w)/2:y=(h-text_h)/2:text='$creationName'" ./tempCreations/"$creationName".mp4 \
         2>> error_message.txt 1>>stdOut.txt
  
     fi
@@ -219,10 +219,4 @@ function mainMenu(){
 }
  
  
- 
-#dispMainMenu
-#listExistingCreations
-#playExistingCreation
-#deleteExistingCreation
 mainMenu
-#createNewCreation
