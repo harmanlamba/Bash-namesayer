@@ -173,7 +173,7 @@ function recordingAudio(){
     printf "\nWe need to now record audio for the creation, speak loud and clear into the mic for 5 seconds\n"
     read -n 1 -r -s -p "Press any key to start recording..."
     printf "\nRecording"
-    ffmpeg -f alsa -ac 2 -i hw:0 -t 5  ./tempCreations/"$creationName".mkv 2>>error_message.txt 1>>stdOut.txt
+    ffmpeg -f alsa -ac 2 -i default -t 5  ./tempCreations/"$creationName".mkv 2>>error_message.txt 1>>stdOut.txt
     confirmRecording "$creationName"
 }
  
